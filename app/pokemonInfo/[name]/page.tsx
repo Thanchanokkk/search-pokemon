@@ -6,6 +6,7 @@ import Link from 'next/link';
 interface Attack {
   name: string;
   damage: number;
+  type: string;
 }
 
 interface Evolution {
@@ -51,10 +52,12 @@ function PokemonInfo() {
                    fast {
                       name
                       damage
+                      type
                     }
                     special {
                       name
                       damage
+                      type
                     }
                   }
                   evolutions {
@@ -112,6 +115,7 @@ function PokemonInfo() {
               {poke.attacks.fast.map((atk) => (
                 <div key={atk.name}>
                   {atk.name} - {atk.damage} dmg
+                  Type: {atk.type}
                 </div>
               ))}
             </div>
@@ -121,13 +125,14 @@ function PokemonInfo() {
           </div>
           <div className="flex justify-center flex-col items-center">
             <h2 className="text-xl font-semibold mb-4">Special Attacks</h2>
-            <ul>
+            <div>
               {poke.attacks.special.map((atk) => (
-                <li key={atk.name}>
+                <div key={atk.name}>
                   {atk.name} - {atk.damage} dmg
-                </li>
+                  Type: {atk.type}
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
