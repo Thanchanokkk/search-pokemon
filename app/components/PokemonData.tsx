@@ -35,6 +35,7 @@ const PokemonData = () => {
         fetchPoke();
     }, []);
 
+
     return (
          <div className='container text-center mx-auto'>
       {loading ? (
@@ -61,5 +62,4 @@ const PokemonData = () => {
     </div>
     );
 };
-
 export default PokemonData;

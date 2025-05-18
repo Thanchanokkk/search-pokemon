@@ -20,8 +20,11 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "types": ["jest", "node"]
+
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/pokemonInfo/[name]", "app/pokemonInfo/[name]"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/pokemonInfo/[name]", "app/pokemonInfo/[name]", "jest.config.ts"],
   "exclude": ["node_modules"]
+  
 }
